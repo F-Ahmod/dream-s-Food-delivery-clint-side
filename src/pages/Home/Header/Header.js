@@ -10,7 +10,7 @@ const Header = () => {
         <div>
             <nav className="navbar navbar-expand-lg  navbar navbar-dark bg-dark">
   <div className="container-fluid">
-    <Link className="navbar-brand" href="#">Navbar</Link>
+    <Link className="navbar-brand" to="/home">Dream's</Link>
             {         
                    user.email &&
                    <p  style={{marginLeft:"50%"}}>

@@ -9,7 +9,7 @@ import { useForm } from 'react-hook-form';
 const Service = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/service',data)
+        axios.post('https://ancient-falls-45075.herokuapp.com/service',data)
         .then(res =>{
             if(res.data.insertedId){
                 alert('added successfully');

@@ -5,7 +5,7 @@ const AddCard = () => {
     const [detal,setDetal]=useState([])
 
 useEffect(()=>{
-    fetch('http://localhost:5000/home')
+    fetch('https://ancient-falls-45075.herokuapp.com/home')
     .then(res =>res.json())
     .then(data => setDetal(data))
     
@@ -14,7 +14,7 @@ useEffect(()=>{
 const handel =id=>{
     const proced=window.confirm('sure you want to delete');
         if(proced){
-            const url=`http://localhost:5000/home/${id}`;
+            const url=`https://ancient-falls-45075.herokuapp.com/home/${id}`;
         fetch(url,{
             method:'DELETE',
             headers:{

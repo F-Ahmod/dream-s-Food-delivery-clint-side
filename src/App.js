@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
@@ -17,6 +17,9 @@ import Service from './pages/Service/Service';
 import AuthProvider from './Hooks/AuthProvaider';
 import Res from './pages/Res/Res';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
+import Footer from './pages/Footer/Footer';
+import NotFound from './pages/NotFound/NotFound';
+import Privacy from './pages/Privacy/Privacy';
 
 
 function App() {
@@ -30,16 +33,12 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home></Home>
-
               <Banner></Banner>
               <Foods></Foods>
               <Service></Service>
               <Res></Res>
               <FeedBack></FeedBack>
-
             </Route>
-
-
             <Route path="/home">
               <Home></Home>
               <Banner></Banner>
@@ -47,19 +46,12 @@ function App() {
               <Res></Res>
               <FeedBack></FeedBack>
             </Route>
-
             <Route path="/login">
               <Login></Login>
             </Route>
-
-            
             <Route path="/helpMore">
               <HeplMore></HeplMore>
             </Route>
-            
-            {/* <Route path="/cards/:id">
-              <Cards></Cards>
-            </Route> */}
             <PrivateRoute path="/cards/:id">
               <Cards></Cards>
             </PrivateRoute>
@@ -73,7 +65,17 @@ function App() {
               <Service></Service>
             </Route>
 
+
+            
+            <Route path="/privacy">
+              <Privacy></Privacy>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
 
       </FoodContext.Provider>

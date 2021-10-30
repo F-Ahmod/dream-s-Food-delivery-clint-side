@@ -13,7 +13,7 @@ const Res = () => {
 
     const [res,setRes]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/restaurent')
+        fetch('https://ancient-falls-45075.herokuapp.com/restaurent')
         .then(res=>res.json())
         .then(data=>setRes(data))
 

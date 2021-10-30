@@ -1,8 +1,8 @@
-.singleFood:hover{
-    box-shadow: 5px 10px 20px inset;
-    border-radius: 10px;
+.singleFood{
+    box-shadow:  0 .125rem .25rem rgba(black, .075);
+    /* border-radius: 10px;
     transition: 0.2s;
-    border: none;
+    border: none; */
     }
     
 
