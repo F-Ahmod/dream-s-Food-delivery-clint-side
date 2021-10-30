@@ -1,0 +1,54 @@
+[
+
+
+    {
+        "title": "Japaness Restaurent",
+        
+        "img": "https://i.ibb.co/7kMpm08/images-25.jpg",
+        "rate": "5.0",
+        "add":"Bronxs,Nyc",
+        "price": "20"
+    },
+    {
+        "title": "Pansi Restaurent",
+        
+        "img": "https://i.ibb.co/b5KHMRn/images-24.jpg",
+        "rate": "5.0",
+        "add":"Menthaton,52st",
+        "price": "14"
+    },
+    {
+        "title": "Expo Dainning",
+        
+        "img": "https://i.ibb.co/TTJFPfT/download-6.jpg",
+        "rate": "5.0",
+        "add":"TimeSqure 12 st",
+        "price": "29"
+    },
+    {
+        "title": "Dream Food",
+        
+        "img": "https://i.ibb.co/kK2X0Gg/download-5.jpg",
+        "rate": "5.0",
+        "add":"Jamaika 63st ave",
+        "price": "19"
+    },
+    {
+        "title": "US-Bangla Foods",
+        
+        "img": "https://i.ibb.co/dQSVYBm/download-4.jpg",
+        "rate": "5.0",
+        "add":"Saflock 23 ave",
+        "price": "11"
+    },
+    {
+        "title": "US-Bangla Foods",
+        
+        "img": "https://i.ibb.co/Bt9TMPZ/restaurant-interior-1127-3394.jpg",
+        "rate": "5.0",
+        "add":"Saflock 23 ave",
+        "price": "11"
+    }
+    
+]
+

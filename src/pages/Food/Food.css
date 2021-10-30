@@ -1,0 +1,12 @@
+.singleFood:hover{
+    box-shadow: 5px 10px 20px inset;
+    border-radius: 10px;
+    transition: 0.2s;
+    border: none;
+    }
+    
+
+     
+    .service-img{
+        overflow: hidden;
+    }
