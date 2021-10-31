@@ -19,7 +19,7 @@ const Header = () => {
         <div>
             <nav className="navbar navbar-expand-lg  navbar navbar-dark bg-dark">
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/home">Dream's</Link>
+    <Link className="navbar-brand" to="/home"> <span className="text-warning">D</span>ream's</Link>
             {         
                    user.email &&
                    <p  style={{marginLeft:"50%"}}>
@@ -34,24 +34,22 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
         <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
-        <Link className="nav-link" href="#">Features</Link>
-        <Link className="nav-link" to="/helpMore">Hepl More</Link>
-        <Link className="nav-link" to="/manageAllOrders">Manage All Orders</Link>
-        <Link className="nav-link" to="/service">Service</Link>
+        
+        <Link className="nav-link active" to="/service">Service</Link>
+        <Link className="nav-link active" to="/helpMore">Hepl More</Link>
         
         
 
         {!user?.email ?
        <>
-          <NavLink className="nav-link fs-5 fw-bold" to="/login">Login</NavLink>
-
-       <NavLink className="nav-link fs-5 fw-bold" to="/singup">Sing-Up</NavLink>
+          <NavLink className="nav-link" to="/login">Login</NavLink>
        </>
         :
         <>
-        <h6 onClick={controlMYOrders} className="nav-link" to="/myOrder">My Order</h6>
+        <h6 onClick={controlMYOrders} className="nav-link active" to="/myOrder">My Order</h6>
+        <Link className="nav-link active" to="/manageAllOrders">Manage Orders</Link>
 
-        <button className="bg-secondary " onClick={logOut} > Sign Out</button>
+        <button className=" active " onClick={logOut} > Sign Out</button>
         </>
         }
 {/* 

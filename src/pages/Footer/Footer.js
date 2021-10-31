@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         <div className="footer2 " >
                 <small className="d-flex justify-content-center">  <Link className="nav-link fs-5 text-light" to="/policy"><small>Policy & policy | Terms of Services | Cookies</small></Link></small>
-                <small className="d-flex justify-content-center">© 2021 Bumrungrad International Hospital A Joint Commission International (JCI) accredited hospital
+                <small className="d-flex justify-content-center">© 2021 all rights reserved by <span>Dream's food delivery</span> 
                </small>
             </div>
         </div>

@@ -21,6 +21,8 @@ import Footer from './pages/Footer/Footer';
 import NotFound from './pages/NotFound/NotFound';
 import Privacy from './pages/Privacy/Privacy';
 import MyOrder from './pages/MyOrder/MyOrder';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
 
 
 function App() {
@@ -71,6 +73,12 @@ function App() {
 
 
             
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
             <Route path="/privacy">
               <Privacy></Privacy>
             </Route>

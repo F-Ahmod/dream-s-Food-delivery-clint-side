@@ -23,7 +23,7 @@ const Service = () => {
 
     return (
         <div className="mt-5 mx-auto mb-5 bg-info" style={{width:"400px",height:"350px"}}>
-            <h2>Our Best Service</h2>
+            <h2>+Add Service's</h2>
             <div className="">
             <form onSubmit={handleSubmit(onSubmit)} className="mt-5 ">
             

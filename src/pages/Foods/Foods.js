@@ -3,6 +3,7 @@ import './Foods.css'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Food from '../Food/Food';
+import { Spinner } from 'react-bootstrap';
 
 const Foods = () => {
     const [foods,setfoods]=useState([]);
@@ -15,16 +16,22 @@ const Foods = () => {
     return (
        <div>
            <h2 className="text-light mt-2 mb-3">Best Foods Ready to Delivery </h2>
-            <div className="container food">
-           
-           {
-               foods.map(food=><Food
-               food={food}
-               >
+            {foods.length ===0 ? 
+            <Spinner animation="border" variant="success" />
+          
 
-               </Food>)
-           } 
-        </div>
+            :
+                <div className="container food">
+           
+                {
+                    foods.map(food=><Food
+                    food={food}
+                    >
+     
+                    </Food>)
+                } 
+             </div>
+            }
        </div>
     );
 };
