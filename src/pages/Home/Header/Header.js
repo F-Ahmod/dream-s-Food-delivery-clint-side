@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useHistory }  from 'react-router';
-// import useFirebase from './../../Firebase/useFireBase';
-import './Header.css'
+import './Header.css';
+import img from  '../../images/logo.png';
 import useAuth from './../../../Hooks/useAuth';
 
 const Header = () => {
@@ -19,11 +19,11 @@ const Header = () => {
         <div>
             <nav className="navbar navbar-expand-lg  navbar navbar-dark bg-dark">
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/home"> <span className="text-warning">D</span>ream's</Link>
+    <Link className="navbar-brand" to="/home"> <img src={img} alt="" srcset="" width="60" /> <span className="text-warning">D</span>ream's Food Delivery</Link>
             {         
                    user.email &&
-                   <p  style={{marginLeft:"50%"}}>
-                    <span className="ms-2 text-primary">{user?.displayName}</span>
+                   <p  style={{marginLeft:"25%"}}>
+                    <span className="me-2 text-primary">{user?.displayName}</span>
                     <img className="rounded-circle" width="30" height="30" src={user?.photoURL} alt="" />
                     
                    </p>
@@ -34,8 +34,6 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
         <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
-        
-        <Link className="nav-link active" to="/service">Service</Link>
         <Link className="nav-link active" to="/helpMore">Hepl More</Link>
         
         
@@ -48,6 +46,7 @@ const Header = () => {
         <>
         <h6 onClick={controlMYOrders} className="nav-link active" to="/myOrder">My Order</h6>
         <Link className="nav-link active" to="/manageAllOrders">Manage Orders</Link>
+        <Link className="nav-link active" to="/service">Add Food</Link>
 
         <button className=" active " onClick={logOut} > Sign Out</button>
         </>
@@ -65,3 +64,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+

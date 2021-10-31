@@ -1,6 +1,7 @@
 
 import React, { useState , useEffect} from 'react';
 import Swal from 'sweetalert2';
+import './ManageallOrders.css';
 
 const ManageAllOrders = () => {
     const [allOrders,setAllOrders]=useState([])
@@ -49,34 +50,36 @@ const ManageAllOrders = () => {
             
     }
     return (
-    <div>
-    <h2 className="mt-3">Manage All Orders</h2>
-    <div className="mx-auto mt-5 mb-5 shadow food">
-    {
+   
+    
+<div className="myOrder mt-5 mb-5 myOrder-container">
+            {
         allOrders.map(allOrder=><div>
-       <div class="card mb-3" style={{maxWidth:"340px", height:"230px"}}>
+       <div class="card mb-3" style={{maxWidth:"540px"}}>
        <div class="row g-0">
        <div class="col-md-4">
-       <img src={allOrder.img} class="img-fluid rounded-start" alt="..."/>
+
+       <img src={allOrder?.img} class="img-fluid rounded-start" alt="..."/>
        </div>
        <div class="col-md-8">
        <div class="card-body">
-        <h5 class="card-title">{allOrder.title}</h5>
-        <p class="card-text">{allOrder.dec}</p>
+        <h5 class="card-title">{allOrder?.title}</h5>
+        <p class="card-text">{allOrder?.dec}</p>
+        
         <p class="card-text"><small class="text-muted">Price $ {allOrder.price}</small></p>
+        <div className="butt d-flex justify-content-between">
+       
+        <button  type="button" className="bg-dark text-light rounded">{allOrder?.status}</button>
         <button onClick={()=>handelOrder(allOrder._id)} type="button" class="btn btn-danger ">Delete</button>
+        </div>
        
       </div>
     </div>
   </div>
 </div>
-                   
-                </div>)
-            }
-    </div>
-
-            
-        </div>
+ </div>)
+      }
+</div>    
     );
 };
 

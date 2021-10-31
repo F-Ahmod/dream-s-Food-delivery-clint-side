@@ -5,6 +5,7 @@ import './Food.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 export const FoodContext=createContext()
 
 const Food = ({food}) => {
@@ -35,6 +36,8 @@ useEffect(()=>{
       easing: 'ease',
   })
 },[]);
+
+
     return (
         <div className="singleFoo  " >
             <Card className="cards shadow " style={{ width: '19rem' }} data-aos="fade-up">
@@ -48,6 +51,8 @@ useEffect(()=>{
                </Card.Body>
               
              </Card>
+
+             
         
         </div>
     );

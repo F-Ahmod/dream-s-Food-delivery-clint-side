@@ -1,23 +1,28 @@
-.myOrder{
+.ManageallOrders-container{
     display: grid;
     grid-template-columns:repeat(3,1fr);
     grid-gap: 30px;
     justify-content: center;
     align-items: center;
-   
 }
+.butt{
+    display: flex;
+}
+
 
 
 @media only screen and (max-width:688px) {
-    .myOrder-container{
+    .ManageallOrders-container{
         grid-template-columns: repeat(1, 1fr);
         justify-content: center;
         align-items: center;
-       
+        height:430px;
+        width:100%;
+        
     }
 }
 @media only screen and (min-width:689px) and (max-width: 991px){
-    .myOrder-container{
+    .ManageallOrders-container{
         grid-template-columns: repeat(2, 1fr);
     }
 }

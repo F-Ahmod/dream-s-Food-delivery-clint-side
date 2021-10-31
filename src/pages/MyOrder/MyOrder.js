@@ -11,7 +11,7 @@ const MyOrder = () => {
     
     const [myOrder,setMyOrder]=useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/home/${email}`)
+        fetch(`https://ancient-falls-45075.herokuapp.com/home`)
         .then(res=>res.json())
         .then(data=>setMyOrder(data))
     },[])
@@ -53,21 +53,27 @@ const MyOrder = () => {
             
     }
     return (
-        <div className="myOrder mt-5 mb-5">
+        <div className="myOrder mt-5 mb-5 myOrder-container">
             {
         myOrder?.map(pd=><div>
        <div class="card mb-3" style={{maxWidth:"540px"}}>
        <div class="row g-0">
        <div class="col-md-4">
-       <img src={pd.img} class="img-fluid rounded-start" alt="..."/>
+       <img src={pd?.img} class="img-fluid rounded-start" alt="..."/>
        </div>
        <div class="col-md-8">
        <div class="card-body">
-        <h5 class="card-title">{pd.title}</h5>
-        <p class="card-text">{pd.dec}</p>
+        <h5 class="card-title">{pd?.title}</h5>
+        <p class="card-text">{pd?.dec}</p>
         <p class="card-text"><small class="text-muted">Price $ {pd.price}</small></p>
-        <button onClick={()=>handelOrde(pd._id)} type="button" class="btn btn-danger ">Delete</button>
+        
+
+        <div className="butt d-flex justify-content-between">
        
+       <button  type="button" class="bg-dark text-light rounded ">{pd?.status}</button>
+       <button onClick={()=>handelOrde(pd?._id)}type="button" class="btn btn-danger ">Delete</button>
+       </div>
+
       </div>
     </div>
   </div>

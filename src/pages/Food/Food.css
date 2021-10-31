@@ -1,8 +1,9 @@
 .singleFood{
     box-shadow:  0 .125rem .25rem rgba(black, .075);
-    /* border-radius: 10px;
-    transition: 0.2s;
-    border: none; */
+    
+    }
+    .singleFood{
+        border-radius: 30px;
     }
     
 
