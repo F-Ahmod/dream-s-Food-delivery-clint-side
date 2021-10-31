@@ -43,15 +43,13 @@ const Footer = () => {
 
             </div>
                 </div>
-            <div className="col-md-3 mt-3 ">
+            <div className="col-md-3 mt-3 d-flex ">
                 <div style={{marginLeft:"15px"}}>
                 <h4>Follow Us</h4>
-                <h6  ><i className="fab fa-facebook-square text-primary fs-2"></i><Link href=""> <small className="text-light">Facbook</small></Link></h6>
-                <h6 className="text-light"><i className="fab fa-youtube-square text-danger fs-2"></i><Link href=""> <small className="text-light"> YouTube</small></Link></h6>
-                <h6 ><i className="fab fa-instagram-square fs-2"></i><Link href=""><small className="text-light"> instagram</small></Link></h6>
-                
-                <h6  ><i className="fab fa-snapchat fs-2 text-warning"></i><Link href=""> <small className="text-light"> Snapchat</small></Link></h6>
-
+                <i className="fab fa-facebook-square text-primary fs-2 me-2"></i>
+                <i className="fab fa-youtube-square text-danger fs-2 me-2"></i>
+                <i className="fab fa-instagram-square fs-2 me-2"></i>
+                <i className="fab fa-snapchat fs-2 text-warning me-2"></i>
                 </div>
             </div>
             
