@@ -20,6 +20,7 @@ import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import Footer from './pages/Footer/Footer';
 import NotFound from './pages/NotFound/NotFound';
 import Privacy from './pages/Privacy/Privacy';
+import MyOrder from './pages/MyOrder/MyOrder';
 
 
 function App() {
@@ -63,6 +64,9 @@ function App() {
             </Route>
             <Route path="/service">
               <Service></Service>
+            </Route>
+            <Route path="/myOrder/:email">
+              <MyOrder></MyOrder>
             </Route>
 
 

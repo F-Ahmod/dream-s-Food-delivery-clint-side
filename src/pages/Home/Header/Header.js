@@ -1,11 +1,20 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useHistory }  from 'react-router';
 // import useFirebase from './../../Firebase/useFireBase';
 import './Header.css'
 import useAuth from './../../../Hooks/useAuth';
 
 const Header = () => {
-    const {logOut,user}=useAuth()
+  const {logOut,user}=useAuth()
+  
+  const history = useHistory()
+  const controlMYOrders=()=>{
+
+    history.push(`/myOrder/${user?.email}`)
+    
+  }
+   
     return (
         <div>
             <nav className="navbar navbar-expand-lg  navbar navbar-dark bg-dark">
@@ -29,6 +38,8 @@ const Header = () => {
         <Link className="nav-link" to="/helpMore">Hepl More</Link>
         <Link className="nav-link" to="/manageAllOrders">Manage All Orders</Link>
         <Link className="nav-link" to="/service">Service</Link>
+        
+        
 
         {!user?.email ?
        <>
@@ -36,7 +47,12 @@ const Header = () => {
 
        <NavLink className="nav-link fs-5 fw-bold" to="/singup">Sing-Up</NavLink>
        </>
-        :<button className="bg-secondary " onClick={logOut} > Sign Out</button>
+        :
+        <>
+        <h6 onClick={controlMYOrders} className="nav-link" to="/myOrder">My Order</h6>
+
+        <button className="bg-secondary " onClick={logOut} > Sign Out</button>
+        </>
         }
 {/* 
         <Link className="nav-link" to="/login">Login</Link>

@@ -4,8 +4,10 @@ import { useState, useEffect, useContext } from 'react';
 import { Card } from 'react-bootstrap';
 import './Cards.css'
 import { FoodContext } from './../Food/Food';
+import useAuth from './../../Hooks/useAuth';
 
 const Cards = () => {
+  const {user}=useAuth()
   const [item,setItem]=useContext(FoodContext)
     const {id}=useParams();
     const [product,setProduct]=useState({});
@@ -18,8 +20,8 @@ const Cards = () => {
     const addToBag =i=>{
 
     // const pb=product.find(pd=>pd._id ===i);
-    console.log(i);
-
+    // console.log(i);
+      product.email=user?.email
     fetch(`https://ancient-falls-45075.herokuapp.com/cards/${id}`,{
       method:"POST",
       headers:{'content-type':'application/json'},
